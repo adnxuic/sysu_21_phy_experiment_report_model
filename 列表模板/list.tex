@@ -1,0 +1,171 @@
+\documentclass[a4paper, 12pt]{book}
+\usepackage[english]{babel}
+
+\usepackage{ctex}
+\setmainfont{SimSun}
+\setmainfont{Times New Roman} 
+
+\usepackage{paralist}
+% 用于紧凑列表和横向列表
+% compactitem是紧凑列表，inparaitem是横向列表
+
+\usepackage{enumitem}
+\setlist{nosep} % nosep表示不留额外的垂直空间
+\setitemize[1]{label=---} % 设置无序列表的项目符号
+\setenumerate[1]{label=\Roman*} % 设置有序列表的编号样式
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\section{无序列表}
+无序列表,最多支持四级嵌套
+\begin{itemize}
+    \item The individual entries are indicated with a black dot, a so-called bullet.
+    \item The text in the entries may be of any length.
+        \begin{itemize}
+            \item This is the second item.
+                \begin{itemize}
+                    \item This is the third item.
+                        \begin{itemize}
+                            \item This is the fourth item.
+                        \end{itemize}
+                    \item This is the third item.
+                \end{itemize}
+            \item This is the second item.
+        \end{itemize}
+    \item This is the First item.
+\end{itemize}
+
+\section{有序列表}
+有序列表，最多支持四级嵌套
+\begin{enumerate}
+    \item The individual entries are indicated with a black dot, a so-called bullet.
+    \item The text in the entries may be of any length.
+        \begin{enumerate}
+            \item This is the second item.
+                \begin{enumerate}
+                    \item This is the third item.
+                        \begin{enumerate}
+                            \item This is the fourth item.
+                        \end{enumerate}
+                    \item This is the third item.
+                \end{enumerate}
+            \item This is the second item.
+        \end{enumerate}
+    \item This is the First item.
+\end{enumerate}
+
+\section{混合列表}
+无序列表和有序列表可以混合使用，最多有六级嵌套
+\begin{itemize}
+    \item The individual entries are indicated with a black dot, a so-called bullet.
+    \item The text in the entries may be of any length.
+        \begin{enumerate}
+            \item This is the second item.
+                \begin{itemize}
+                    \item This is the third item.
+                        \begin{enumerate}
+                            \item This is the fourth item.
+                        \end{enumerate}
+                    \item This is the third item.
+                \end{itemize}
+            \item This is the second item.
+        \end{enumerate}
+    \item This is the First item.
+\end{itemize}
+
+\section{自定义列表}
+定义列表
+\begin{description}
+    \item[First Item] The individual entries are indicated with a black dot, a so-called bullet.
+    \item[Second Item] The text in the entries may be of any length.
+        \begin{description}
+            \item[First Item] This is the second item.
+                \begin{description}
+                    \item[First Item] This is the third item.
+                        \begin{description}
+                            \item[First Item] This is the fourth item.
+                        \end{description}
+                    \item[Second Item] This is the third item.
+                \end{description}
+            \item[Second Item] This is the second item.
+        \end{description}
+    \item[Third Item] This is the First item.
+\end{description}
+
+\section{紧凑列表}
+\begin{compactitem}
+    \item The individual entries are indicated with a black dot, a so-called bullet.
+    \item The text in the entries may be of any length.
+        \begin{compactitem}
+            \item This is the second item.
+                \begin{compactitem}
+                    \item This is the third item.
+                        \begin{compactitem}
+                            \item This is the fourth item.
+                        \end{compactitem}
+                    \item This is the third item.
+                \end{compactitem}
+            \item This is the second item.
+        \end{compactitem}
+    \item This is the First item.
+\end{compactitem}
+
+\section{横向列表}
+\begin{compactitem}
+    \item The individual entries are indicated with a black dot, a so-called bullet.
+    \item The text in the entries may be of any length.
+        \begin{compactitem}
+            \item This is the second item.
+                \begin{compactitem}
+                    \item This is the third item.\\
+                        \begin{inparaitem}
+                            \item This is the fourth item.
+                            \item This is the fourth item.
+                        \end{inparaitem}
+                    \item This is the third item.
+                \end{compactitem}
+            \item This is the second item.
+        \end{compactitem}
+    \item This is the First item.
+\end{compactitem}
+
+\section{自选项目符号和编号样式}
+要用自定义的项目符号和编号样式，可以使用enumitem宏包，
+具体用法参考宏包文档。
+\begin{enumerate}
+    \item The individual entries are indicated with a black dot, a so-called bullet.
+    \item The text in the entries may be of any length.
+        \begin{enumerate}
+            \item This is the second item.
+                \begin{enumerate}
+                    \item This is the third item.
+                        \begin{enumerate}
+                            \item This is the fourth item.
+                        \end{enumerate}
+                    \item This is the third item.
+                \end{enumerate}
+            \item This is the second item.
+        \end{enumerate}
+\end{enumerate}
+
+\begin{itemize}
+    \item The individual entries are indicated with a black dot, a so-called bullet.
+    \item The text in the entries may be of any length.
+        \begin{itemize}
+            \item This is the second item.
+                \begin{itemize}
+                    \item This is the third item.
+                        \begin{itemize}
+                            \item This is the fourth item.
+                        \end{itemize}
+                    \item This is the third item.
+                \end{itemize}
+            \item This is the second item.
+        \end{itemize}
+    \item This is the First item.
+\end{itemize}
+
+
+\end{document}
